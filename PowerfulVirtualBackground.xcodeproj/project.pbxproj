@@ -18,6 +18,8 @@
 		8F96131326F59A23001CE2E8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96131226F59A23001CE2E8 /* Config.swift */; };
 		8F96131D26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8F96131C26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel */; };
 		8F96131F26F61FBE001CE2E8 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96131E26F61FBE001CE2E8 /* Image+Extension.swift */; };
+		8F96132226F62B13001CE2E8 /* PowerfullViratualBackground.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F96132026F62B13001CE2E8 /* PowerfullViratualBackground.xcdatamodeld */; };
+		8F96136226F6301B001CE2E8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96136126F6301B001CE2E8 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		8F96131226F59A23001CE2E8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8F96131C26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel; sourceTree = "<group>"; };
 		8F96131E26F61FBE001CE2E8 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		8F96132126F62B13001CE2E8 /* PowerfullViratualBackground.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PowerfullViratualBackground.xcdatamodel; sourceTree = "<group>"; };
+		8F96136026F63000001CE2E8 /* PowerfullViratualBackground.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PowerfullViratualBackground.entitlements; sourceTree = "<group>"; };
+		8F96136126F6301B001CE2E8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,9 @@
 				8F96131226F59A23001CE2E8 /* Config.swift */,
 				8F96131C26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel */,
 				8F96131E26F61FBE001CE2E8 /* Image+Extension.swift */,
+				8F96136026F63000001CE2E8 /* PowerfullViratualBackground.entitlements */,
+				8F96132026F62B13001CE2E8 /* PowerfullViratualBackground.xcdatamodeld */,
+				8F96136126F6301B001CE2E8 /* Persistence.swift */,
 			);
 			path = PowerfulVirtualBackground;
 			sourceTree = "<group>";
@@ -276,6 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F96136226F6301B001CE2E8 /* Persistence.swift in Sources */,
+				8F96132226F62B13001CE2E8 /* PowerfullViratualBackground.xcdatamodeld in Sources */,
 				8F96130F26F5961B001CE2E8 /* CameraPreview.swift in Sources */,
 				8F9612E526F59389001CE2E8 /* ContentView.swift in Sources */,
 				8F96131D26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel in Sources */,
@@ -605,6 +615,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8F96132026F62B13001CE2E8 /* PowerfullViratualBackground.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8F96132126F62B13001CE2E8 /* PowerfullViratualBackground.xcdatamodel */,
+			);
+			currentVersion = 8F96132126F62B13001CE2E8 /* PowerfullViratualBackground.xcdatamodel */;
+			path = PowerfullViratualBackground.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8F9612D726F59389001CE2E8 /* Project object */;
 }

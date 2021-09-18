@@ -163,7 +163,7 @@ class CameraPreviewInternal: NSView, AVCaptureAudioDataOutputSampleBufferDelegat
 extension CameraPreviewInternal: AVCaptureVideoDataOutputSampleBufferDelegate {
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        if captureCounter % 4 != 0 {
+        if captureCounter % 10 != 0 {
             return
         }
         
