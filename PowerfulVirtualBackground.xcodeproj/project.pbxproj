@@ -16,6 +16,8 @@
 		8F96130F26F5961B001CE2E8 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96130E26F5961B001CE2E8 /* CameraPreview.swift */; };
 		8F96131126F5970B001CE2E8 /* CameraPreviewInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96131026F5970B001CE2E8 /* CameraPreviewInternal.swift */; };
 		8F96131326F59A23001CE2E8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96131226F59A23001CE2E8 /* Config.swift */; };
+		8F96131D26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8F96131C26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel */; };
+		8F96131F26F61FBE001CE2E8 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96131E26F61FBE001CE2E8 /* Image+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		8F96130E26F5961B001CE2E8 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		8F96131026F5970B001CE2E8 /* CameraPreviewInternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewInternal.swift; sourceTree = "<group>"; };
 		8F96131226F59A23001CE2E8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		8F96131C26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel; sourceTree = "<group>"; };
+		8F96131E26F61FBE001CE2E8 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				8F96130E26F5961B001CE2E8 /* CameraPreview.swift */,
 				8F96131026F5970B001CE2E8 /* CameraPreviewInternal.swift */,
 				8F96131226F59A23001CE2E8 /* Config.swift */,
+				8F96131C26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel */,
+				8F96131E26F61FBE001CE2E8 /* Image+Extension.swift */,
 			);
 			path = PowerfulVirtualBackground;
 			sourceTree = "<group>";
@@ -272,8 +278,10 @@
 			files = (
 				8F96130F26F5961B001CE2E8 /* CameraPreview.swift in Sources */,
 				8F9612E526F59389001CE2E8 /* ContentView.swift in Sources */,
+				8F96131D26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel in Sources */,
 				8F96131326F59A23001CE2E8 /* Config.swift in Sources */,
 				8F96131126F5970B001CE2E8 /* CameraPreviewInternal.swift in Sources */,
+				8F96131F26F61FBE001CE2E8 /* Image+Extension.swift in Sources */,
 				8F9612E326F59389001CE2E8 /* PowerfulVirtualBackgroundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

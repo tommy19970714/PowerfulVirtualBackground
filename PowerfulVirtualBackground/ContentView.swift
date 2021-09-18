@@ -11,15 +11,14 @@ import AVFoundation
 struct ContentView: View {
     var body: some View {
         VStack(spacing: 16) {
-            InputImageView()
+            CameraView()
             Spacer()
             .frame(maxHeight: 20)
         }
     }
 }
 
-struct InputImageView: View {
-    
+struct CameraView: View {
     var body: some View {
         ZStack {
             cameraPreview().animation(.spring())
