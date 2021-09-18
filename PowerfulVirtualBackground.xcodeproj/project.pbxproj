@@ -22,6 +22,7 @@
 		8F96136226F6301B001CE2E8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96136126F6301B001CE2E8 /* Persistence.swift */; };
 		8F96136526F63D5F001CE2E8 /* ImageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96136426F63D5F001CE2E8 /* ImageCollectionView.swift */; };
 		8F96136726F63D7B001CE2E8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96136626F63D7B001CE2E8 /* CameraView.swift */; };
+		8F96136B26F64160001CE2E8 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96136A26F64160001CE2E8 /* UserDefaultsUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		8F96136126F6301B001CE2E8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8F96136426F63D5F001CE2E8 /* ImageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionView.swift; sourceTree = "<group>"; };
 		8F96136626F63D7B001CE2E8 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		8F96136A26F64160001CE2E8 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +120,10 @@
 				8F96136326F63D50001CE2E8 /* Views */,
 				8F96136826F63DD1001CE2E8 /* Models */,
 				8F96136926F63DE9001CE2E8 /* Utils */,
+				8F9612E826F5938B001CE2E8 /* Preview Content */,
 				8F9612E626F5938B001CE2E8 /* Assets.xcassets */,
 				8F9612EB26F5938B001CE2E8 /* Info.plist */,
 				8F9612EC26F5938B001CE2E8 /* PowerfulVirtualBackground.entitlements */,
-				8F9612E826F5938B001CE2E8 /* Preview Content */,
 				8F96136026F63000001CE2E8 /* PowerfullViratualBackground.entitlements */,
 				8F96132026F62B13001CE2E8 /* PowerfullViratualBackground.xcdatamodeld */,
 			);
@@ -181,6 +183,7 @@
 			children = (
 				8F96131226F59A23001CE2E8 /* Config.swift */,
 				8F96131E26F61FBE001CE2E8 /* Image+Extension.swift */,
+				8F96136A26F64160001CE2E8 /* UserDefaultsUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				8F96136726F63D7B001CE2E8 /* CameraView.swift in Sources */,
 				8F96131126F5970B001CE2E8 /* CameraPreviewInternal.swift in Sources */,
 				8F96131F26F61FBE001CE2E8 /* Image+Extension.swift in Sources */,
+				8F96136B26F64160001CE2E8 /* UserDefaultsUtil.swift in Sources */,
 				8F9612E326F59389001CE2E8 /* PowerfulVirtualBackgroundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

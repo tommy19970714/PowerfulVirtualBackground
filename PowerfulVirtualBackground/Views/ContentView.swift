@@ -34,7 +34,7 @@ struct ContentView: View {
         panel.allowsMultipleSelection = false
         panel.canChooseDirectories = false
         if panel.runModal() == .OK, let url = panel.url {
-            return NSImage(contentsOf: url)
+            return NSImage(contentsOf: url)?.resize(width: 640, height: 360)
         }
         return nil
     }

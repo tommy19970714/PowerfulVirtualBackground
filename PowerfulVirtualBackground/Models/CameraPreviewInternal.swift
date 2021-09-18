@@ -12,6 +12,10 @@ import VideoToolbox
 import Vision
 import CoreImage.CIFilterBuiltins
 
+extension NSNotification {
+    static let selectBackgroundImage = NSNotification.Name.init("selectBackgroundImage")
+}
+
 class CameraPreviewInternal: NSView, AVCaptureAudioDataOutputSampleBufferDelegate {
     var captureDevice: AVCaptureDevice?
     private var captureSession: AVCaptureSession
@@ -24,6 +28,7 @@ class CameraPreviewInternal: NSView, AVCaptureAudioDataOutputSampleBufferDelegat
     let videoDataOutputQueue = DispatchQueue(label: "com.toshiki.PowerfullVirtualBackground.videoDataOutputQueue")
     private var lastOutput: MLFeatureProvider?
     private var model: MLModel!
+    private var backgroundImage = NSImage(named: "background")!
 
     init(frame frameRect: NSRect, device: AVCaptureDevice?) {
         captureDevice = device
@@ -37,6 +42,12 @@ class CameraPreviewInternal: NSView, AVCaptureAudioDataOutputSampleBufferDelegat
         
         let config = MLModelConfiguration()
         self.model = try! rvm_mobilenetv3_1280x720_s0_375_fp16(configuration: config).model
+        NotificationCenter.default.addObserver(self, selector: #selector(onUpdateBackgroundImage), name: NSNotification.selectBackgroundImage, object: nil)
+        backgroundImage = UserDefaultsUtil.backgroundImage
+    }
+    
+    @objc func onUpdateBackgroundImage(sender: NSNotification) {
+        backgroundImage = UserDefaultsUtil.backgroundImage
     }
 
     private func setupPreviewLayer(_ captureSession: AVCaptureSession) {
@@ -182,7 +193,7 @@ extension CameraPreviewInternal: AVCaptureVideoDataOutputSampleBufferDelegate {
         for name in output.featureNames {
             if name == "pha", let featureValue = output.featureValue(for: name), let image = featureValue.imageBufferValue {
                 let blend = CIFilter.blendWithMask()
-                blend.backgroundImage = NSImage(named: "background")?.ciImage
+                blend.backgroundImage = backgroundImage.ciImage
                 blend.inputImage = CIImage(cvPixelBuffer: imageBuffer)
                 blend.maskImage = CIImage(cvPixelBuffer: image)
                 if let output = blend.outputImage?.nsImage {

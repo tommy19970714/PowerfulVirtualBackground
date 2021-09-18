@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Cocoa
 
 class Config {
 

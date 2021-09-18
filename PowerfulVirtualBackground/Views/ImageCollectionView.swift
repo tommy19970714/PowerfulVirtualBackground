@@ -25,6 +25,10 @@ struct ImageCollectionView: View {
                             .frame(width: 180, height: 100)
                             .aspectRatio(1, contentMode: .fill)
                             .cornerRadius(8)
+                            .onTapGesture {
+                                UserDefaultsUtil.backgroundImageData = item.image
+                                NotificationCenter.default.post(name: NSNotification.selectBackgroundImage, object: self, userInfo: nil)
+                            }
                         ZStack {
                             Rectangle().foregroundColor(.red)
                                 .cornerRadius(30)
