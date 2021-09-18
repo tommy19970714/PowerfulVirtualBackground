@@ -24,11 +24,11 @@ class CameraPreviewInternal: NSView, AVCaptureAudioDataOutputSampleBufferDelegat
     private var videoOutput = AVCaptureVideoDataOutput()
     private var videoConnection: AVCaptureConnection?
     private var imageView: NSImageView!
-    fileprivate var captureCounter = 0
     let videoDataOutputQueue = DispatchQueue(label: "com.toshiki.PowerfullVirtualBackground.videoDataOutputQueue")
     private var lastOutput: MLFeatureProvider?
     private var model: MLModel!
     private var backgroundImage = NSImage(named: "background")!
+    private var executing = false
 
     init(frame frameRect: NSRect, device: AVCaptureDevice?) {
         captureDevice = device
@@ -174,9 +174,10 @@ class CameraPreviewInternal: NSView, AVCaptureAudioDataOutputSampleBufferDelegat
 extension CameraPreviewInternal: AVCaptureVideoDataOutputSampleBufferDelegate {
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        if captureCounter % 10 != 0 {
+        if executing {
             return
         }
+        executing = true
         
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         var featureDictionary: [String: Any] = [
@@ -204,5 +205,6 @@ extension CameraPreviewInternal: AVCaptureVideoDataOutputSampleBufferDelegate {
             }
         }
         lastOutput = output
+        executing = false
     }
 }
