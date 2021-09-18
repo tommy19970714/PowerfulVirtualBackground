@@ -25,10 +25,8 @@ class CameraPreviewInternal: NSView, AVCaptureAudioDataOutputSampleBufferDelegat
     private var videoConnection: AVCaptureConnection?
     private var imageView: NSImageView!
     let videoDataOutputQueue = DispatchQueue(label: "com.toshiki.PowerfullVirtualBackground.videoDataOutputQueue")
-    private var lastOutput: MLFeatureProvider?
-    private var model: MLModel!
-    private var backgroundImage = NSImage(named: "background")!
     private var executing = false
+    private var vartualBackground = VirtualBackground()
 
     init(frame frameRect: NSRect, device: AVCaptureDevice?) {
         captureDevice = device
@@ -39,15 +37,6 @@ class CameraPreviewInternal: NSView, AVCaptureAudioDataOutputSampleBufferDelegat
         configureDevice(device)
         setupPreviewLayer(captureSession)
         captureSession.startRunning()
-        
-        let config = MLModelConfiguration()
-        self.model = try! rvm_mobilenetv3_1280x720_s0_375_fp16(configuration: config).model
-        NotificationCenter.default.addObserver(self, selector: #selector(onUpdateBackgroundImage), name: NSNotification.selectBackgroundImage, object: nil)
-        backgroundImage = UserDefaultsUtil.backgroundImage
-    }
-    
-    @objc func onUpdateBackgroundImage(sender: NSNotification) {
-        backgroundImage = UserDefaultsUtil.backgroundImage
     }
 
     private func setupPreviewLayer(_ captureSession: AVCaptureSession) {
@@ -180,31 +169,10 @@ extension CameraPreviewInternal: AVCaptureVideoDataOutputSampleBufferDelegate {
         executing = true
         
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-        var featureDictionary: [String: Any] = [
-            "src": imageBuffer
-        ]
-        if let lastOut = lastOutput {
-            featureDictionary["r1i"] = lastOut.featureValue(for: "r1o")
-            featureDictionary["r2i"] = lastOut.featureValue(for: "r2o")
-            featureDictionary["r3i"] = lastOut.featureValue(for: "r3o")
-            featureDictionary["r4i"] = lastOut.featureValue(for: "r4o")
+        let output = vartualBackground.predict(imageBuffer: imageBuffer)
+        DispatchQueue.main.async {
+            self.imageView.image = output
         }
-        let featureProvider = try! MLDictionaryFeatureProvider(dictionary: featureDictionary)
-        let output = try! model.prediction(from: featureProvider)
-        for name in output.featureNames {
-            if name == "pha", let featureValue = output.featureValue(for: name), let image = featureValue.imageBufferValue {
-                let blend = CIFilter.blendWithMask()
-                blend.backgroundImage = backgroundImage.ciImage
-                blend.inputImage = CIImage(cvPixelBuffer: imageBuffer)
-                blend.maskImage = CIImage(cvPixelBuffer: image)
-                if let output = blend.outputImage?.nsImage {
-                    DispatchQueue.main.async {
-                        self.imageView.image = output
-                    }
-                }
-            }
-        }
-        lastOutput = output
         executing = false
     }
 }

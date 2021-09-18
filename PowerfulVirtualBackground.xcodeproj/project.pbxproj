@@ -23,6 +23,7 @@
 		8F96136526F63D5F001CE2E8 /* ImageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96136426F63D5F001CE2E8 /* ImageCollectionView.swift */; };
 		8F96136726F63D7B001CE2E8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96136626F63D7B001CE2E8 /* CameraView.swift */; };
 		8F96136B26F64160001CE2E8 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96136A26F64160001CE2E8 /* UserDefaultsUtil.swift */; };
+		8F96138E26F65D76001CE2E8 /* VirtualBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96138D26F65D76001CE2E8 /* VirtualBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		8F96136426F63D5F001CE2E8 /* ImageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionView.swift; sourceTree = "<group>"; };
 		8F96136626F63D7B001CE2E8 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		8F96136A26F64160001CE2E8 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
+		8F96138D26F65D76001CE2E8 /* VirtualBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				8F96131026F5970B001CE2E8 /* CameraPreviewInternal.swift */,
 				8F96136126F6301B001CE2E8 /* Persistence.swift */,
 				8F96131C26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel */,
+				8F96138D26F65D76001CE2E8 /* VirtualBackground.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				8F96136526F63D5F001CE2E8 /* ImageCollectionView.swift in Sources */,
 				8F96131D26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel in Sources */,
 				8F96131326F59A23001CE2E8 /* Config.swift in Sources */,
+				8F96138E26F65D76001CE2E8 /* VirtualBackground.swift in Sources */,
 				8F96136726F63D7B001CE2E8 /* CameraView.swift in Sources */,
 				8F96131126F5970B001CE2E8 /* CameraPreviewInternal.swift in Sources */,
 				8F96131F26F61FBE001CE2E8 /* Image+Extension.swift in Sources */,
