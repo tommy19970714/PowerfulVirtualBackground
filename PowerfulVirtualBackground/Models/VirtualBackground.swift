@@ -24,13 +24,22 @@ class VirtualBackground: NSObject {
         let modelURL = bundle.url(forResource: "rvm_mobilenetv3_1280x720_s0.375_fp16", withExtension: "mlmodelc")!
         self.model  = try! MLModel(contentsOf: modelURL, configuration: config)
         NotificationCenter.default.addObserver(self, selector: #selector(onUpdateBackgroundImage), name: NSNotification.selectBackgroundImage, object: nil)
-        if let background = UserDefaultsUtil.backgroundImage {
+        if let background = PasteboardUtil.current() {
+            backgroundImage = background
+        }
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerUpdate), userInfo: nil, repeats: true)
+    }
+    
+    @objc func onUpdateBackgroundImage(sender: NSNotification) {
+        if let background = PasteboardUtil.current() {
             backgroundImage = background
         }
     }
     
-    @objc func onUpdateBackgroundImage(sender: NSNotification) {
-        backgroundImage = UserDefaultsUtil.backgroundImage
+    @objc func timerUpdate() {
+        if let background = PasteboardUtil.current() {
+            backgroundImage = background
+        }
     }
     
     func predict(imageBuffer: CVPixelBuffer) -> NSImage? {

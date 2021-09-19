@@ -12,6 +12,8 @@
 		8F637C1426F66F7200E232DD /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8F637C1226F66F7200E232DD /* background.jpeg */; };
 		8F637C1626F70BCC00E232DD /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F637C1526F70BCC00E232DD /* VideoCapture.swift */; };
 		8F637C1726F70BCC00E232DD /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F637C1526F70BCC00E232DD /* VideoCapture.swift */; };
+		8F637C1C26F7173500E232DD /* PasteboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F637C1B26F7173500E232DD /* PasteboardUtil.swift */; };
+		8F637C1D26F7173500E232DD /* PasteboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F637C1B26F7173500E232DD /* PasteboardUtil.swift */; };
 		8F9612E326F59389001CE2E8 /* PowerfulVirtualBackgroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9612E226F59389001CE2E8 /* PowerfulVirtualBackgroundApp.swift */; };
 		8F9612E526F59389001CE2E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9612E426F59389001CE2E8 /* ContentView.swift */; };
 		8F9612E726F5938B001CE2E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9612E626F5938B001CE2E8 /* Assets.xcassets */; };
@@ -66,6 +68,7 @@
 /* Begin PBXFileReference section */
 		8F637C1226F66F7200E232DD /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
 		8F637C1526F70BCC00E232DD /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		8F637C1B26F7173500E232DD /* PasteboardUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardUtil.swift; sourceTree = "<group>"; };
 		8F9612DF26F59389001CE2E8 /* PowerfulVirtualBackground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerfulVirtualBackground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9612E226F59389001CE2E8 /* PowerfulVirtualBackgroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerfulVirtualBackgroundApp.swift; sourceTree = "<group>"; };
 		8F9612E426F59389001CE2E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -240,6 +243,7 @@
 				8F96131226F59A23001CE2E8 /* Config.swift */,
 				8F96131E26F61FBE001CE2E8 /* Image+Extension.swift */,
 				8F96136A26F64160001CE2E8 /* UserDefaultsUtil.swift */,
+				8F637C1B26F7173500E232DD /* PasteboardUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -439,6 +443,7 @@
 				8F96131F26F61FBE001CE2E8 /* Image+Extension.swift in Sources */,
 				8F96136B26F64160001CE2E8 /* UserDefaultsUtil.swift in Sources */,
 				8F9612E326F59389001CE2E8 /* PowerfulVirtualBackgroundApp.swift in Sources */,
+				8F637C1C26F7173500E232DD /* PasteboardUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +476,7 @@
 				8F96139226F6621B001CE2E8 /* UserDefaultsUtil.swift in Sources */,
 				8F96137A26F65B8A001CE2E8 /* CVPixelBuffer+SimpleDALPlugin.swift in Sources */,
 				8F96139026F661A5001CE2E8 /* Image+Extension.swift in Sources */,
+				8F637C1D26F7173500E232DD /* PasteboardUtil.swift in Sources */,
 				8F96137E26F65BC4001CE2E8 /* Log.swift in Sources */,
 				8F96138226F65BF9001CE2E8 /* Object.swift in Sources */,
 				8F637C1726F70BCC00E232DD /* VideoCapture.swift in Sources */,

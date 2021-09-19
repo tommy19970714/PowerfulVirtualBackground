@@ -21,8 +21,6 @@ class Config {
     static let mainAppBundleIdentifier = "com.toshiki.PowerfulVirtualBackground"
     
     static let settingFileName = "Settings.json"
-    
-    static let groupId = "J6246ZXP2D" + mainAppBundleIdentifier
 }
 
 extension NSNotification {

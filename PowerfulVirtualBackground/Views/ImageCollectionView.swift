@@ -26,7 +26,9 @@ struct ImageCollectionView: View {
                             .aspectRatio(1, contentMode: .fill)
                             .cornerRadius(8)
                             .onTapGesture {
-                                UserDefaultsUtil.backgroundImageData = item.image
+                                if let data = item.image {
+                                    PasteboardUtil.update(data: data)
+                                }
                                 NotificationCenter.default.post(name: NSNotification.selectBackgroundImage, object: self, userInfo: nil)
                             }
                         ZStack {
