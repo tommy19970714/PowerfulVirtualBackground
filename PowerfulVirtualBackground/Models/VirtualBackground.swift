@@ -13,15 +13,20 @@ import Cocoa
 
 class VirtualBackground: NSObject {
     private var model: MLModel!
-    private var backgroundImage = NSImage(named: "background")!
+    private var backgroundImage: NSImage!
     private var lastOutput: MLFeatureProvider?
     
-    override init() {
+    init(bundle: Bundle = .main) {
         super.init()
+        let imageUrl = bundle.url(forResource: "background", withExtension: "jpeg")!
+        backgroundImage = NSImage(contentsOf: imageUrl)
         let config = MLModelConfiguration()
-        self.model = try! rvm_mobilenetv3_1280x720_s0_375_fp16(configuration: config).model
+        let modelURL = bundle.url(forResource: "rvm_mobilenetv3_1280x720_s0.375_fp16", withExtension: "mlmodelc")!
+        self.model  = try! MLModel(contentsOf: modelURL, configuration: config)
         NotificationCenter.default.addObserver(self, selector: #selector(onUpdateBackgroundImage), name: NSNotification.selectBackgroundImage, object: nil)
-        backgroundImage = UserDefaultsUtil.backgroundImage
+        if let background = UserDefaultsUtil.backgroundImage {
+            backgroundImage = background
+        }
     }
     
     @objc func onUpdateBackgroundImage(sender: NSNotification) {

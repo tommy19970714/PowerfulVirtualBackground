@@ -19,7 +19,7 @@ struct CameraView: View {
     }
     
     func cameraPreview() -> AnyView {
-        if Config.useVirtualCamera, let cameraDevice = AVCaptureDevice.init(uniqueID: "Powerfull Virtual Background Device") {
+        if Config.useVirtualCamera, let cameraDevice = AVCaptureDevice.init(uniqueID: "PowerfulVirtualBackground Device") {
             return AnyView(CameraPreview(captureDevice: cameraDevice)
             .frame(width: 640, height: 360))
         }

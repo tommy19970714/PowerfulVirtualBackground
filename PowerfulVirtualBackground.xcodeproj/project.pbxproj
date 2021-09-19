@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F637C1026F66C4F00E232DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9612E626F5938B001CE2E8 /* Assets.xcassets */; };
+		8F637C1326F66F7200E232DD /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8F637C1226F66F7200E232DD /* background.jpeg */; };
+		8F637C1426F66F7200E232DD /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8F637C1226F66F7200E232DD /* background.jpeg */; };
+		8F637C1626F70BCC00E232DD /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F637C1526F70BCC00E232DD /* VideoCapture.swift */; };
+		8F637C1726F70BCC00E232DD /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F637C1526F70BCC00E232DD /* VideoCapture.swift */; };
 		8F9612E326F59389001CE2E8 /* PowerfulVirtualBackgroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9612E226F59389001CE2E8 /* PowerfulVirtualBackgroundApp.swift */; };
 		8F9612E526F59389001CE2E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9612E426F59389001CE2E8 /* ContentView.swift */; };
 		8F9612E726F5938B001CE2E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9612E626F5938B001CE2E8 /* Assets.xcassets */; };
@@ -23,7 +28,22 @@
 		8F96136526F63D5F001CE2E8 /* ImageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96136426F63D5F001CE2E8 /* ImageCollectionView.swift */; };
 		8F96136726F63D7B001CE2E8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96136626F63D7B001CE2E8 /* CameraView.swift */; };
 		8F96136B26F64160001CE2E8 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96136A26F64160001CE2E8 /* UserDefaultsUtil.swift */; };
+		8F96137826F65B6B001CE2E8 /* CameraCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96137726F65B6B001CE2E8 /* CameraCapture.swift */; };
+		8F96137A26F65B8A001CE2E8 /* CVPixelBuffer+SimpleDALPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96137926F65B8A001CE2E8 /* CVPixelBuffer+SimpleDALPlugin.swift */; };
+		8F96137C26F65BA1001CE2E8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96137B26F65BA1001CE2E8 /* Device.swift */; };
+		8F96137E26F65BC4001CE2E8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96137D26F65BC4001CE2E8 /* Log.swift */; };
+		8F96138026F65BE0001CE2E8 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96137F26F65BE0001CE2E8 /* Main.swift */; };
+		8F96138226F65BF9001CE2E8 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96138126F65BF9001CE2E8 /* Object.swift */; };
+		8F96138426F65C21001CE2E8 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96138326F65C21001CE2E8 /* Plugin.swift */; };
+		8F96138626F65C39001CE2E8 /* PluginInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96138526F65C39001CE2E8 /* PluginInterface.swift */; };
+		8F96138826F65C50001CE2E8 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96138726F65C50001CE2E8 /* Property.swift */; };
+		8F96138A26F65C65001CE2E8 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96138926F65C65001CE2E8 /* Stream.swift */; };
 		8F96138E26F65D76001CE2E8 /* VirtualBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96138D26F65D76001CE2E8 /* VirtualBackground.swift */; };
+		8F96138F26F6608A001CE2E8 /* VirtualBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96138D26F65D76001CE2E8 /* VirtualBackground.swift */; };
+		8F96139026F661A5001CE2E8 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96131E26F61FBE001CE2E8 /* Image+Extension.swift */; };
+		8F96139126F66212001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8F96131C26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel */; };
+		8F96139226F6621B001CE2E8 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96136A26F64160001CE2E8 /* UserDefaultsUtil.swift */; };
+		8F96139326F6623A001CE2E8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96131226F59A23001CE2E8 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F637C1226F66F7200E232DD /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
+		8F637C1526F70BCC00E232DD /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		8F9612DF26F59389001CE2E8 /* PowerfulVirtualBackground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerfulVirtualBackground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9612E226F59389001CE2E8 /* PowerfulVirtualBackgroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerfulVirtualBackgroundApp.swift; sourceTree = "<group>"; };
 		8F9612E426F59389001CE2E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +90,19 @@
 		8F96136426F63D5F001CE2E8 /* ImageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionView.swift; sourceTree = "<group>"; };
 		8F96136626F63D7B001CE2E8 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		8F96136A26F64160001CE2E8 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
+		8F96137026F65AEF001CE2E8 /* PowerfulVirtualBackgroundPlugin.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PowerfulVirtualBackgroundPlugin.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F96137226F65AEF001CE2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F96137626F65B6B001CE2E8 /* PowerfulVirtualBackgroundPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PowerfulVirtualBackgroundPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
+		8F96137726F65B6B001CE2E8 /* CameraCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCapture.swift; sourceTree = "<group>"; };
+		8F96137926F65B8A001CE2E8 /* CVPixelBuffer+SimpleDALPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+SimpleDALPlugin.swift"; sourceTree = "<group>"; };
+		8F96137B26F65BA1001CE2E8 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		8F96137D26F65BC4001CE2E8 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		8F96137F26F65BE0001CE2E8 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		8F96138126F65BF9001CE2E8 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		8F96138326F65C21001CE2E8 /* Plugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
+		8F96138526F65C39001CE2E8 /* PluginInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginInterface.swift; sourceTree = "<group>"; };
+		8F96138726F65C50001CE2E8 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		8F96138926F65C65001CE2E8 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		8F96138D26F65D76001CE2E8 /* VirtualBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,15 +128,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8F96136D26F65AEF001CE2E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F637C1126F66F5800E232DD /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				8F637C1226F66F7200E232DD /* background.jpeg */,
+			);
+			path = Pictures;
+			sourceTree = "<group>";
+		};
 		8F9612D626F59389001CE2E8 = {
 			isa = PBXGroup;
 			children = (
 				8F9612E126F59389001CE2E8 /* PowerfulVirtualBackground */,
 				8F9612F426F5938C001CE2E8 /* PowerfulVirtualBackgroundTests */,
 				8F9612FF26F5938C001CE2E8 /* PowerfulVirtualBackgroundUITests */,
+				8F96137126F65AEF001CE2E8 /* PowerfulVirtualBackgroundPlugin */,
 				8F9612E026F59389001CE2E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +163,7 @@
 				8F9612DF26F59389001CE2E8 /* PowerfulVirtualBackground.app */,
 				8F9612F126F5938C001CE2E8 /* PowerfulVirtualBackgroundTests.xctest */,
 				8F9612FC26F5938C001CE2E8 /* PowerfulVirtualBackgroundUITests.xctest */,
+				8F96137026F65AEF001CE2E8 /* PowerfulVirtualBackgroundPlugin.plugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,10 +171,12 @@
 		8F9612E126F59389001CE2E8 /* PowerfulVirtualBackground */ = {
 			isa = PBXGroup;
 			children = (
+				8F96131C26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel */,
 				8F96136326F63D50001CE2E8 /* Views */,
 				8F96136826F63DD1001CE2E8 /* Models */,
 				8F96136926F63DE9001CE2E8 /* Utils */,
 				8F9612E826F5938B001CE2E8 /* Preview Content */,
+				8F637C1126F66F5800E232DD /* Pictures */,
 				8F9612E626F5938B001CE2E8 /* Assets.xcassets */,
 				8F9612EB26F5938B001CE2E8 /* Info.plist */,
 				8F9612EC26F5938B001CE2E8 /* PowerfulVirtualBackground.entitlements */,
@@ -175,7 +229,6 @@
 				8F96130E26F5961B001CE2E8 /* CameraPreview.swift */,
 				8F96131026F5970B001CE2E8 /* CameraPreviewInternal.swift */,
 				8F96136126F6301B001CE2E8 /* Persistence.swift */,
-				8F96131C26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel */,
 				8F96138D26F65D76001CE2E8 /* VirtualBackground.swift */,
 			);
 			path = Models;
@@ -189,6 +242,26 @@
 				8F96136A26F64160001CE2E8 /* UserDefaultsUtil.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8F96137126F65AEF001CE2E8 /* PowerfulVirtualBackgroundPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				8F96137226F65AEF001CE2E8 /* Info.plist */,
+				8F96137726F65B6B001CE2E8 /* CameraCapture.swift */,
+				8F96137626F65B6B001CE2E8 /* PowerfulVirtualBackgroundPlugin-Bridging-Header.h */,
+				8F96137926F65B8A001CE2E8 /* CVPixelBuffer+SimpleDALPlugin.swift */,
+				8F96137B26F65BA1001CE2E8 /* Device.swift */,
+				8F96137D26F65BC4001CE2E8 /* Log.swift */,
+				8F96137F26F65BE0001CE2E8 /* Main.swift */,
+				8F96138126F65BF9001CE2E8 /* Object.swift */,
+				8F96138326F65C21001CE2E8 /* Plugin.swift */,
+				8F96138526F65C39001CE2E8 /* PluginInterface.swift */,
+				8F96138726F65C50001CE2E8 /* Property.swift */,
+				8F96138926F65C65001CE2E8 /* Stream.swift */,
+				8F637C1526F70BCC00E232DD /* VideoCapture.swift */,
+			);
+			path = PowerfulVirtualBackgroundPlugin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +320,23 @@
 			productReference = 8F9612FC26F5938C001CE2E8 /* PowerfulVirtualBackgroundUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		8F96136F26F65AEF001CE2E8 /* PowerfulVirtualBackgroundPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F96137326F65AEF001CE2E8 /* Build configuration list for PBXNativeTarget "PowerfulVirtualBackgroundPlugin" */;
+			buildPhases = (
+				8F96136C26F65AEF001CE2E8 /* Sources */,
+				8F96136D26F65AEF001CE2E8 /* Frameworks */,
+				8F96136E26F65AEF001CE2E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PowerfulVirtualBackgroundPlugin;
+			productName = PowerfulVirtualBackgroundPlugin;
+			productReference = 8F96137026F65AEF001CE2E8 /* PowerfulVirtualBackgroundPlugin.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -267,6 +357,10 @@
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 8F9612DE26F59389001CE2E8;
 					};
+					8F96136F26F65AEF001CE2E8 = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
+					};
 				};
 			};
 			buildConfigurationList = 8F9612DA26F59389001CE2E8 /* Build configuration list for PBXProject "PowerfulVirtualBackground" */;
@@ -285,6 +379,7 @@
 				8F9612DE26F59389001CE2E8 /* PowerfulVirtualBackground */,
 				8F9612F026F5938C001CE2E8 /* PowerfulVirtualBackgroundTests */,
 				8F9612FB26F5938C001CE2E8 /* PowerfulVirtualBackgroundUITests */,
+				8F96136F26F65AEF001CE2E8 /* PowerfulVirtualBackgroundPlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F9612EA26F5938B001CE2E8 /* Preview Assets.xcassets in Resources */,
+				8F637C1326F66F7200E232DD /* background.jpeg in Resources */,
 				8F9612E726F5938B001CE2E8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +409,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8F96136E26F65AEF001CE2E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F637C1026F66C4F00E232DD /* Assets.xcassets in Resources */,
+				8F637C1426F66F7200E232DD /* background.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -328,6 +433,7 @@
 				8F96131D26F616AE001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel in Sources */,
 				8F96131326F59A23001CE2E8 /* Config.swift in Sources */,
 				8F96138E26F65D76001CE2E8 /* VirtualBackground.swift in Sources */,
+				8F637C1626F70BCC00E232DD /* VideoCapture.swift in Sources */,
 				8F96136726F63D7B001CE2E8 /* CameraView.swift in Sources */,
 				8F96131126F5970B001CE2E8 /* CameraPreviewInternal.swift in Sources */,
 				8F96131F26F61FBE001CE2E8 /* Image+Extension.swift in Sources */,
@@ -349,6 +455,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F96130126F5938C001CE2E8 /* PowerfulVirtualBackgroundUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F96136C26F65AEF001CE2E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F96138826F65C50001CE2E8 /* Property.swift in Sources */,
+				8F96138626F65C39001CE2E8 /* PluginInterface.swift in Sources */,
+				8F96138026F65BE0001CE2E8 /* Main.swift in Sources */,
+				8F96137C26F65BA1001CE2E8 /* Device.swift in Sources */,
+				8F96138426F65C21001CE2E8 /* Plugin.swift in Sources */,
+				8F96139126F66212001CE2E8 /* rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel in Sources */,
+				8F96139226F6621B001CE2E8 /* UserDefaultsUtil.swift in Sources */,
+				8F96137A26F65B8A001CE2E8 /* CVPixelBuffer+SimpleDALPlugin.swift in Sources */,
+				8F96139026F661A5001CE2E8 /* Image+Extension.swift in Sources */,
+				8F96137E26F65BC4001CE2E8 /* Log.swift in Sources */,
+				8F96138226F65BF9001CE2E8 /* Object.swift in Sources */,
+				8F637C1726F70BCC00E232DD /* VideoCapture.swift in Sources */,
+				8F96138F26F6608A001CE2E8 /* VirtualBackground.swift in Sources */,
+				8F96139326F6623A001CE2E8 /* Config.swift in Sources */,
+				8F96137826F65B6B001CE2E8 /* CameraCapture.swift in Sources */,
+				8F96138A26F65C65001CE2E8 /* Stream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +744,53 @@
 			};
 			name = Release;
 		};
+		8F96137426F65AEF001CE2E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 75STC66VW4;
+				INFOPLIST_FILE = PowerfulVirtualBackgroundPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.toshiki.PowerfulVirtualBackgroundPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PowerfulVirtualBackgroundPlugin/PowerfulVirtualBackgroundPlugin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Debug;
+		};
+		8F96137526F65AEF001CE2E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 75STC66VW4;
+				INFOPLIST_FILE = PowerfulVirtualBackgroundPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.toshiki.PowerfulVirtualBackgroundPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PowerfulVirtualBackgroundPlugin/PowerfulVirtualBackgroundPlugin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -650,6 +826,15 @@
 			buildConfigurations = (
 				8F96130C26F5938C001CE2E8 /* Debug */,
 				8F96130D26F5938C001CE2E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F96137326F65AEF001CE2E8 /* Build configuration list for PBXNativeTarget "PowerfulVirtualBackgroundPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F96137426F65AEF001CE2E8 /* Debug */,
+				8F96137526F65AEF001CE2E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

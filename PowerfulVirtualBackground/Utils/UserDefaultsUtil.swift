@@ -15,12 +15,12 @@ class UserDefaultsUtil {
         case backgroundImage = "backgroundImage"
     }
     
-    static var backgroundImage: NSImage {
+    static var backgroundImage: NSImage? {
         get {
             if let data = userDefaults.data(forKey: key.backgroundImage.rawValue), let image = NSImage(data: data) {
                 return image
             }
-            return NSImage(named: "background")!
+            return nil
         }
         set {
             do {

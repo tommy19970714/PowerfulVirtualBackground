@@ -12,10 +12,6 @@ import VideoToolbox
 import Vision
 import CoreImage.CIFilterBuiltins
 
-extension NSNotification {
-    static let selectBackgroundImage = NSNotification.Name.init("selectBackgroundImage")
-}
-
 class CameraPreviewInternal: NSView, AVCaptureAudioDataOutputSampleBufferDelegate {
     var captureDevice: AVCaptureDevice?
     private var captureSession: AVCaptureSession
@@ -26,13 +22,17 @@ class CameraPreviewInternal: NSView, AVCaptureAudioDataOutputSampleBufferDelegat
     private var imageView: NSImageView!
     let videoDataOutputQueue = DispatchQueue(label: "com.toshiki.PowerfullVirtualBackground.videoDataOutputQueue")
     private var executing = false
-    private var vartualBackground = VirtualBackground()
+    private var vartualBackground: VirtualBackground!
 
     init(frame frameRect: NSRect, device: AVCaptureDevice?) {
         captureDevice = device
         captureSession = AVCaptureSession()
 
         super.init(frame: frameRect)
+        
+        if !Config.useVirtualCamera {
+            vartualBackground = VirtualBackground()
+        }
 
         configureDevice(device)
         setupPreviewLayer(captureSession)
@@ -169,9 +169,19 @@ extension CameraPreviewInternal: AVCaptureVideoDataOutputSampleBufferDelegate {
         executing = true
         
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-        let output = vartualBackground.predict(imageBuffer: imageBuffer)
-        DispatchQueue.main.async {
-            self.imageView.image = output
+        let size = NSSize(width: CVPixelBufferGetWidth(imageBuffer), height: CVPixelBufferGetHeight(imageBuffer))
+        if Config.useVirtualCamera {
+            var cgImage: CGImage?
+            VTCreateCGImageFromCVPixelBuffer(imageBuffer, options: nil, imageOut: &cgImage)
+            DispatchQueue.main.async {
+                self.imageView.image = NSImage(cgImage: cgImage!, size: size)
+            }
+            return
+        } else {
+            let output = vartualBackground.predict(imageBuffer: imageBuffer)
+            DispatchQueue.main.async {
+                self.imageView.image = output
+            }
         }
         executing = false
     }

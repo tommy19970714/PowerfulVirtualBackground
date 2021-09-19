@@ -24,3 +24,7 @@ class Config {
     
     static let groupId = "J6246ZXP2D" + mainAppBundleIdentifier
 }
+
+extension NSNotification {
+    static let selectBackgroundImage = NSNotification.Name.init("selectBackgroundImage")
+}
